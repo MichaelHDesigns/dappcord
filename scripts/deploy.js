@@ -21,7 +21,7 @@ async function main() {
   const CHANNEL_NAMES = ["Info", "General", "Market", "Jobs"]
   const COSTS = [tokens(0), tokens(0.01), tokens(0.05), tokens(0.25)]
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 4; i++) {
     const transaction = await dappcord.connect(deployer).createChannel(CHANNEL_NAMES[i], COSTS[i])
     await transaction.wait()
 

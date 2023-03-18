@@ -1,6 +1,7 @@
 import ethereum from '../assets/ethereum.png';
 import plus from '../assets/plus.png';
 import search from '../assets/search.jpg';
+import market from '../assets/market.png';
 
 const Servers = () => {
   return (
@@ -8,6 +9,11 @@ const Servers = () => {
   <div className="server">
     <a href="https://altcoinchain.org" target="_blank" rel="noopener noreferrer">
       <img src={ethereum} alt="Ethereum Logo" />
+    </a>
+  </div>
+<div className="server">
+    <a href="http://206.189.231.104:4000/" target="_blank" rel="noopener noreferrer">
+      <img src={market} alt="Market Logo" />
     </a>
   </div>
   <div className="server">

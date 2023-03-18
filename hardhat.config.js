@@ -10,7 +10,7 @@ module.exports = {
       blockConfirmations: 1,
       allowUnlimitedContractSize: true,
       chainId: 2330 // Replace with the appropriate chain ID
-    }
+    },
     hardhat: {
       chainId: 2330,
       blockConfirmations: 1,

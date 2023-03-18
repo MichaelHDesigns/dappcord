@@ -1,5 +1,5 @@
-import ethereum from '../assets/ethereum.svg';
-import plus from '../assets/plus.svg';
+import ethereum from '../assets/ethereum.png';
+import plus from '../assets/plus.png';
 import search from '../assets/search.jpg';
 
 const Servers = () => {

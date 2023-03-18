@@ -17,7 +17,7 @@ const Channels = ({ provider, account, dappcord, channels, currentChannel, setCu
   return (
     <div className="channels">
       <div className="channels__text">
-        <h2>Text Channels</h2>
+        <h2>ALT Channels</h2>
 
         <ul>
           {channels.map((channel, index) => (

@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
-import { ethers } from 'ethers'
-import { io } from "socket.io-client"
+import { useEffect, useState } from 'react';
+import { ethers } from 'ethers';
+import { io } from "socket.io-client";
+import Web3 from "web3";
 
 // Components
 import Navigation from './components/Navigation'
@@ -18,6 +19,12 @@ import config from './config.json';
 const socket = io('ws://localhost:3030');
 
 function App() {
+  const [web3, setWeb3] = useState(null);
+  const [accounts, setAccounts] = useState([]);
+  const [contract, setContract] = useState(null);
+  const [serverName, setServerName] = useState("");
+  const [serverPrice, setServerPrice] = useState(0);
+  
   const [provider, setProvider] = useState(null)
   const [account, setAccount] = useState(null)
 
@@ -72,7 +79,44 @@ function App() {
       socket.off('new message')
       socket.off('get messages')
     }
+    
+        const initWeb3 = async () => {
+      if (window.ethereum) {
+        const web3 = new Web3(window.ethereum);
+        try {
+          await window.ethereum.enable();
+          setWeb3(web3);
+          const accounts = await web3.eth.getAccounts();
+          setAccounts(accounts);
+          const networkId = await web3.eth.net.getId();
+          const deployedNetwork = Dappcord.networks[networkId];
+          const contract = new web3.eth.Contract(
+            Dappcord.abi,
+            deployedNetwork && deployedNetwork.address
+          );
+          setContract(contract);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    };
+    initWeb3();
   }, [])
+  
+    const handleCreateServer = async () => {
+    if (contract) {
+      const priceInWei = web3.utils.toWei(serverPrice.toString(), "ether");
+      try {
+        await contract.methods.createServer(serverName).send({
+          from: accounts[0],
+          value: priceInWei
+        });
+        // server created successfully, do something here
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
 
   return (
     <div>

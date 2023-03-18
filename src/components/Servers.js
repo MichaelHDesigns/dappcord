@@ -4,7 +4,7 @@ import search from '../assets/search.svg';
 
 import { useState } from "react";
 import { ethers } from "ethers";
-import DappcordServer from "../abis/DappcordServer.json";
+import DappcordServer from "../abis/Dappcord.json";
 
 function Servers({ account, contract }) {
   const [serverName, setServerName] = useState("");

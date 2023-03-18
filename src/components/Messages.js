@@ -7,7 +7,7 @@ import send from '../assets/send.svg'
 
 // Socket
 
-const socket = io('ws://altcord.com:3000')
+const socket = io('ws://altcord.com:3030')
 
 
 const Messages = ({ account, messages, currentChannel }) => {

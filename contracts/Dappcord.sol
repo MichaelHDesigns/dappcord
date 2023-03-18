@@ -13,6 +13,25 @@ contract Dappcord is ERC721 {
         string name;
         uint256 cost;
     }
+    
+     struct Server {
+        string name;
+        uint256 price;
+    }
+    
+    mapping(address => Server[]) public servers;
+
+    event ServerCreated(address indexed owner, string name, uint256 price);
+
+    function createServer(string memory name, uint256 price) public {
+        servers[msg.sender].push(Server(name, price));
+        emit ServerCreated(msg.sender, name, price);
+    }
+
+    function createServerWithPayment(string memory name) public payable {
+        require(msg.value == 5 ether, "Please pay 5 ether to create a server.");
+        createServer(name, msg.value);
+    }
 
     mapping(uint256 => Channel) public channels;
     mapping(uint256 => mapping(address => bool)) public hasJoined;

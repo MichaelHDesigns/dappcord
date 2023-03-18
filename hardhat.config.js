@@ -6,10 +6,11 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     localhost: {
-      chainId: 2330,
+      url: "http://localhost:8545",
       blockConfirmations: 1,
       allowUnlimitedContractSize: true,
-    },
+      chainId: 2330 // Replace with the appropriate chain ID
+    }
     hardhat: {
       chainId: 2330,
       blockConfirmations: 1,

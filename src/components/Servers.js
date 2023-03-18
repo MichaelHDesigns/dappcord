@@ -4,17 +4,23 @@ import search from '../assets/search.svg';
 
 const Servers = () => {
   return (
-    <div className="servers">
-      <div className="server">
-        <img src={ethereum} alt="Ethereum Logo" />
-      </div>
-      <div className="server">
-        <img src={plus} alt="Add Server" />
-      </div>
-      <div className="server">
-        <img src={search} alt="Add Server" />
-      </div>
-    </div>
+  <div className="servers">
+  <div className="server">
+    <a href="https://altcoinchain.org">
+      <img src={ethereum} alt="Ethereum Logo" />
+    </a>
+  </div>
+  <div className="server">
+    <a href="https://shop.mining.game/">
+      <img src={plus} alt="Add Server" />
+    </a>
+  </div>
+  <div className="server">
+    <a href="https://michaelh.org/">
+      <img src={search} alt="Search Servers" />
+    </a>
+  </div>
+</div>
   );
 }
 

@@ -16,7 +16,7 @@ import config from './config.json';
 
 // Socket
 
-const socket = io('ws://altcord.com');
+const socket = io('ws://206.189.231.104:3000');
 
 
 function App() {

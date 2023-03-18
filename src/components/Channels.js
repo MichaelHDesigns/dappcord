@@ -30,15 +30,15 @@ const Channels = ({ provider, account, dappcord, channels, currentChannel, setCu
         </ul>
       </div>
 
-      <div className="channels__voice">
-        <h2>Voice Channels</h2>
+//      <div className="channels__voice">
+//        <h2>Voice Channels</h2>
 
-        <ul>
-          <li>Channel 1</li>
-          <li>Channel 2</li>
-          <li>Channel 3</li>
-        </ul>
-      </div>
+//        <ul>
+//          <li>Channel 1</li>
+//          <li>Channel 2</li>
+//          <li>Channel 3</li>
+//        </ul>
+//      </div>
     </div>
   );
 }

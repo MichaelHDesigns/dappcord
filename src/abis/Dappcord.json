@@ -2,6 +2,23 @@
     {
         "inputs": [
             {
+        "internalType": "string",
+        "name": "_serverName",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_serverPrice",
+        "type": "uint256"
+      }
+    ],
+    "name": "createServer",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function",
+    "payable": true
+  }            
+            {
                 "internalType": "string",
                 "name": "_name",
                 "type": "string"

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import { io } from "socket.io-client";
-import Web3 from "web3";
 
 // Components
 import Navigation from './components/Navigation'

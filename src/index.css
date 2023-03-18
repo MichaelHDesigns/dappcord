@@ -12,7 +12,7 @@
   --clr-grey: #303136;
   --clr-light-grey: #363940;
   --clr-dark-grey: #212226;
-  --clr-blue: #5865F2;
+  --clr-blue: #fff;
   --clr-green: #34AB55;
 
   --clr-text-grey: #66666e;
@@ -138,10 +138,11 @@ main {
 }
 
 .server img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 43px;
 }
 
 /* ------------------------------------------------------ */

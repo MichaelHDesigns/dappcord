@@ -12,7 +12,7 @@
   --clr-grey: #303136;
   --clr-light-grey: #363940;
   --clr-dark-grey: #212226;
-  --clr-blue: #fff;
+  --clr-blue: #5865F2;
   --clr-green: #34AB55;
 
   --clr-text-grey: #66666e;
@@ -117,7 +117,7 @@ main {
 /* -- SERVERS -- */
 
 .server {
-  background-color: var(--clr-grey);
+  background-color: #fff;
 
   width: 60px;
   height: 60px;

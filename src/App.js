@@ -15,7 +15,7 @@ import Dappcord from './abis/Dappcord.json'
 import config from './config.json';
 
 // Socket
-const socket = io('ws://localhost:3030');
+const socket = io('ws://206.189.231.104:3030');
 
 function App() {
   

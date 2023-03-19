@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { List, ListItem, ListItemText } from '@material-ui/core';
 import io from 'socket.io-client';
 
 const socket = io('http://altcord.com:3030');
@@ -20,13 +19,11 @@ const UserList = () => {
   return (
     <div>
       <h2>Users:</h2>
-      <List>
+      <ul>
         {users.map((user, index) => (
-          <ListItem key={index}>
-            <ListItemText primary={user} />
-          </ListItem>
+          <li key={index}>{user}</li>
         ))}
-      </List>
+      </ul>
     </div>
   );
 };

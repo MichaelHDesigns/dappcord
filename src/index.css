@@ -344,3 +344,23 @@ main {
     grid-column: 7/13;
   }
 }
+
+/* ------------------------------------------------------ */
+/* -- User List -- */
+
+.container {
+  width: 200px;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.userList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.userList li {
+  margin-bottom: 10px;
+}

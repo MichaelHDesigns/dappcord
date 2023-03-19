@@ -15,6 +15,11 @@ const messages = [
     account: "0x8dA3dA022d7a5224615c8F2E3fFdDc5B883B24A2",
     text: "Welcome to the Market Channel! Here you can talk about the market!"
   },
+    {
+    channel: "3",
+    account: "0x8dA3dA022d7a5224615c8F2E3fFdDc5B883B24A2",
+    text: "Welcome to the Jobs Channel! Here you can post about jobs!"
+  },
 ]
 
 const { Server } = require("socket.io");

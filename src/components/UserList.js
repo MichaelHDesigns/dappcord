@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { List, ListItem, ListItemText } from '@material-ui/core';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3030');
+const socket = io('http://altcord.com:3030');
 
 const UserList = () => {
   const [users, setUsers] = useState([]);

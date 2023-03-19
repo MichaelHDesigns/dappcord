@@ -1,6 +1,6 @@
 import ethereum from '../assets/ethereum.png';
 import plus from '../assets/plus.png';
-import search from '../assets/search.jpg';
+import search from '../assets/search.png';
 import market from '../assets/market.png';
 import swap from '../assets/swap.png';
 

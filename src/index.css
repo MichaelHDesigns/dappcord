@@ -348,53 +348,38 @@ main {
 /* ------------------------------------------------------ */
 /* -- User List -- */
 
-.UserList {
-  height: 100%;
-  overflow-y: scroll;
-  padding: 15px;
-  background-color: #36393f;
-  width: 250px;
-  position: fixed;
-  right: 0;
+.user-list {
+  position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
+  width: 200px;
+  padding: 20px;
+  background-color: var(--clr-secondary);
+  overflow-y: auto;
+  scrollbar-width: none; /* hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* hide scrollbar for IE and Edge */
 }
 
-.UserList h2 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 15px;
+.user-list::-webkit-scrollbar {
+  width: 0px; /* hide scrollbar for Chrome, Safari, and Opera */
 }
 
-.UserList ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.UserList li {
+.user {
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 }
 
-.UserList li span {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.UserList li .user-avatar {
-  background-color: #7289da;
-  border-radius: 50%;
-  display: inline-block;
-  height: 30px;
-  margin-right: 10px;
-  vertical-align: middle;
+.user img {
   width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.UserList li .user-name {
-  color: #fff;
+.user p {
+  margin: 0;
+  color: var(--clr-white);
   font-size: 14px;
-  font-weight: 500;
-  vertical-align: middle;
 }

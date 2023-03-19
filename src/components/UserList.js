@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './UserList.css';
+import './index.css';
 import io from 'socket.io-client';
 
 const socket = io('http://altcord.com:3030');

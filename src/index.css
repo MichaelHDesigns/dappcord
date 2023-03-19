@@ -348,7 +348,7 @@ main {
 /* ------------------------------------------------------ */
 /* -- User List -- */
 
-.user-list {
+.UserList {
   grid-column: 3/4;
 
   display: flex;
@@ -358,7 +358,7 @@ main {
   padding-top: 40px;
 }
 
-.user {
+.UserList {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -366,18 +366,18 @@ main {
   transition: 250ms ease all;
 }
 
-.user:hover {
+.UserList:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.user img {
+.UserList img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.user .address {
+.UserList .address {
   color: var(--clr-white);
   font-size: 14px;
   font-weight: 600;

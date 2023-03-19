@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import { io } from "socket.io-client";
+import UserList from './components/UserList';
 
 // Components
 import Navigation from './components/Navigation'
@@ -15,9 +16,7 @@ import Dappcord from './abis/Dappcord.json'
 import config from './config.json';
 
 // Socket
-
 const socket = io('ws://altcord.com:3030');
-
 
 function App() {
   
@@ -29,6 +28,9 @@ function App() {
 
   const [currentChannel, setCurrentChannel] = useState(null)
   const [messages, setMessages] = useState([])
+  
+  // NEW STATE FOR USER LIST
+  const [users, setUsers] = useState([]);
 
   const loadBlockchainData = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -69,11 +71,17 @@ function App() {
     socket.on('get messages', (messages) => {
       setMessages(messages)
     })
+    
+    // ADD SOCKET LISTENER FOR USER LIST
+    socket.on('users', (users) => {
+      setUsers(users);
+    });
 
     return () => {
       socket.off('connect')
       socket.off('new message')
       socket.off('get messages')
+      socket.off('users');
     }
 
   }, [])
@@ -94,6 +102,9 @@ function App() {
           currentChannel={currentChannel}
           setCurrentChannel={setCurrentChannel}
         />
+
+        {/* PASS USER LIST TO USER LIST COMPONENT */}
+        <UserList users={users} />
 
         <Messages account={account} messages={messages} currentChannel={currentChannel} />
       </main>

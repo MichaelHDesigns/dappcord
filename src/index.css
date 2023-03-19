@@ -344,39 +344,3 @@ main {
     grid-column: 7/13;
   }
 }
-
-/* ------------------------------------------------------ */
-/* -- User List -- */
-
-.user-list-container {
-  display: flex;
-  justify-content: flex-end;
-  margin: 20px;
-}
-
-.user-list {
-  width: 300px;
-  height: 400px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px #ccc;
-}
-
-.user-list-header {
-  background-color: #f0f0f0;
-  padding: 10px;
-  font-weight: bold;
-  border-radius: 5px 5px 0 0;
-}
-
-.user-list-item {
-  cursor: pointer;
-}
-
-.user-list-item:hover {
-  background-color: #f0f0f0;
-}
-
-

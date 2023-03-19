@@ -1,17 +1,34 @@
-import React from 'react';
-import styles from '../index.css';
+import React, { useState, useEffect } from 'react';
+import { List, ListItem, ListItemText } from '@material-ui/core';
+import io from 'socket.io-client';
 
-function UserList({ users }) {
+const socket = io('http://localhost:3030');
+
+const UserList = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    socket.emit('get users');
+  }, []);
+
+  useEffect(() => {
+    socket.on('get users', (data) => {
+      setUsers(data);
+    });
+  }, []);
+
   return (
-    <div className={styles.container}>
-      <h2>Users</h2>
-      <ul className={styles.userList}>
+    <div>
+      <h2>Users:</h2>
+      <List>
         {users.map((user, index) => (
-          <li key={index}>{user.address}</li>
+          <ListItem key={index}>
+            <ListItemText primary={user} />
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </div>
   );
-}
+};
 
 export default UserList;
